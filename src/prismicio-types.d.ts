@@ -4,12 +4,23 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomeDocumentDataSlicesSlice = never;
+type HomeDocumentDataSlicesSlice = TessaViergeverProfileCardSlice;
 
 /**
  * Content for home documents
  */
 interface HomeDocumentData {
+  /**
+   * Name field in *home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
   /**
    * Slice Zone field in *home*
    *
@@ -66,63 +77,114 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-interface KaasDocumentData {}
+export type AllDocumentTypes = HomeDocument;
 
 /**
- * KAAS🧀 document from Prismic
- *
- * - **API ID**: `kaas`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
+ * Primary content in *TessaViergeverProfileCard → Primary*
  */
-export type KaasDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<KaasDocumentData>, "kaas", Lang>;
-
-export type AllDocumentTypes = HomeDocument | KaasDocument;
-
-/**
- * Primary content in *Menu → Items*
- */
-export interface MenuSliceDefaultItem {
+export interface TessaViergeverProfileCardSliceDefaultPrimary {
   /**
-   * profiel foto field in *Menu → Items*
+   * Name field in *TessaViergeverProfileCard → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tessa_viergever_profile_card.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Profile picture field in *TessaViergeverProfileCard → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: menu.items[].profiel_foto
+   * - **API ID Path**: tessa_viergever_profile_card.primary.profile_picture
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  profiel_foto: prismic.ImageField<never>;
+  profile_picture: prismic.ImageField<never>;
+
+  /**
+   * Age field in *TessaViergeverProfileCard → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: Leeftijd
+   * - **API ID Path**: tessa_viergever_profile_card.primary.age
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  age: prismic.NumberField;
+
+  /**
+   * Hobbies field in *TessaViergeverProfileCard → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Hobbies
+   * - **API ID Path**: tessa_viergever_profile_card.primary.hobbies
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hobbies: prismic.RichTextField;
+
+  /**
+   * Instagram field in *TessaViergeverProfileCard → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tessa_viergever_profile_card.primary.instagram
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  instagram: prismic.LinkField;
+
+  /**
+   * LinkedIn field in *TessaViergeverProfileCard → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tessa_viergever_profile_card.primary.linkedin
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linkedin: prismic.LinkField;
+
+  /**
+   * Github field in *TessaViergeverProfileCard → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tessa_viergever_profile_card.primary.github
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  github: prismic.LinkField;
 }
 
 /**
- * Default variation for Menu Slice
+ * Default variation for TessaViergeverProfileCard Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MenuSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  Simplify<MenuSliceDefaultItem>
->;
+export type TessaViergeverProfileCardSliceDefault =
+  prismic.SharedSliceVariation<
+    "default",
+    Simplify<TessaViergeverProfileCardSliceDefaultPrimary>,
+    never
+  >;
 
 /**
- * Slice variation for *Menu*
+ * Slice variation for *TessaViergeverProfileCard*
  */
-type MenuSliceVariation = MenuSliceDefault;
+type TessaViergeverProfileCardSliceVariation =
+  TessaViergeverProfileCardSliceDefault;
 
 /**
- * Menu Shared Slice
+ * TessaViergeverProfileCard Shared Slice
  *
- * - **API ID**: `menu`
- * - **Description**: Menu
+ * - **API ID**: `tessa_viergever_profile_card`
+ * - **Description**: TessaViergeverProfileCard
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MenuSlice = prismic.SharedSlice<"menu", MenuSliceVariation>;
+export type TessaViergeverProfileCardSlice = prismic.SharedSlice<
+  "tessa_viergever_profile_card",
+  TessaViergeverProfileCardSliceVariation
+>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -137,13 +199,11 @@ declare module "@prismicio/client" {
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
-      KaasDocument,
-      KaasDocumentData,
       AllDocumentTypes,
-      MenuSlice,
-      MenuSliceDefaultItem,
-      MenuSliceVariation,
-      MenuSliceDefault,
+      TessaViergeverProfileCardSlice,
+      TessaViergeverProfileCardSliceDefaultPrimary,
+      TessaViergeverProfileCardSliceVariation,
+      TessaViergeverProfileCardSliceDefault,
     };
   }
 }

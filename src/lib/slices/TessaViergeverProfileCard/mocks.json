@@ -1,0 +1,74 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"name": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Tessa Viergever"
+			},
+			"profile_picture": {
+				"origin": {
+					"id": "uyaTT9u6AvI",
+					"url": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw5fHxwcm9maWxlJTIwcGhvdG98ZW58MHx8fHwxNjk0Nzc2MDI4fDA&ixlib=rb-4.0.3&q=85",
+					"width": 4160,
+					"height": 6240
+				},
+				"url": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw5fHxwcm9maWxlJTIwcGhvdG98ZW58MHx8fHwxNjk0Nzc2MDI4fDA&ixlib=rb-4.0.3&q=85",
+				"width": 4160,
+				"height": 6240,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"alt": "zwart wit profielfoto van Tessa Viergever",
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"instagram": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"linkedin": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"age": {
+				"__TYPE__": "FieldContent",
+				"type": "Number",
+				"value": "30"
+			},
+			"hobbies": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sit pariatur in aute quis est ad excepteur consequat eu veniam nulla qui amet culpa do. Culpa et duis adipisicing sit fugiat laborum nisi. Veniam quis ut officia magna reprehenderit nostrud do Lorem ullamco."
+						}
+					}
+				]
+			},
+			"github": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			}
+		},
+		"items": []
+	}
+]

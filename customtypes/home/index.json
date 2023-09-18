@@ -12,11 +12,22 @@
         },
         "type": "UID"
       },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "tessa_viergever_profile_card": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },

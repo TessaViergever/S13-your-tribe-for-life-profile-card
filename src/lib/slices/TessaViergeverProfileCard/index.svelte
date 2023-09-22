@@ -11,11 +11,11 @@
     
       <img src={slice.primary.profile_picture.url} alt="placeholder" width="250" height="auto">
   
-      <p>{slice.primary.hobbies}</p>
+      <p>{slice.primary.hobbies[0].text}</p>
       <p>{slice.primary.age}</p>
-      <a>{slice.primary.instagram}</a>
-      <a>{slice.primary.linkedin}</a>
-      <a>{slice.primary.github}</a>
+      <a href="{slice.primary.instagram.url}">Instagram</a>
+      <a href="{slice.primary.linkedin.url}">LinkedIn</a>
+      <a href="{slice.primary.github}">Github</a>
     </section>
   </main>
 </body>
@@ -35,10 +35,10 @@
     --color-primary: rgba(248, 247, 255, 1);         /*  */  
     --color-secundary: rgba(255, 238, 221, 1);       /* coral*/  
     --color-tertiary: rgba(255, 216, 190, 1);        /* coral*/ 
-    --color-highlights: rgba(184, 184, 255, 1);       /* coral*/ 
+    --color-highlights: rgba(184, 184, 255, 1);       /* lila */ 
 
      /* custom properties : text */ 
-    --color-text: rgba(147, 129, 255, 1);             /* coral*/ 
+    --color-text: rgba(147, 129, 255, 1);             /* paars*/ 
 
 
 

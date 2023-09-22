@@ -1,12 +1,12 @@
 # Profile card 👩‍💻
 
 ## 📃 Inhoudsopgave 
-1. [Beschrijving ℹ️]()
-2. [Gebruik 🖥️]()
-3. [Kenmerken 💡]()
-4. [Installatie 📥]()
-5. [Bronnen 🌍]()
-6. [Licentie 🪪]()
+1. [Beschrijving ℹ️](https://github.com/TessaViergever/S13-your-tribe-for-life-profile-card/blob/main/README.md#%E2%84%B9%EF%B8%8F-beschrijving)
+2. [Gebruik 🖥️](https://github.com/TessaViergever/S13-your-tribe-for-life-profile-card/blob/main/README.md#%EF%B8%8F-gebruik)
+3. [Kenmerken 💡](https://github.com/TessaViergever/S13-your-tribe-for-life-profile-card/blob/main/README.md#-kenmerken)
+4. [Installatie 📥](https://github.com/TessaViergever/S13-your-tribe-for-life-profile-card/blob/main/README.md#-installatie)
+5. [Bronnen 🌍](https://github.com/TessaViergever/S13-your-tribe-for-life-profile-card/blob/main/README.md#-bronnen)
+6. [Licentie 🪪](https://github.com/TessaViergever/S13-your-tribe-for-life-profile-card/blob/main/README.md#-licentie)
 
 #
 
@@ -70,7 +70,7 @@ De applicatie wordt gehost op  http://localhost:5173/
 
 ## 🌍 Bronnen 
 
-* [Instructies](https://github.com/fdnd-task/your-tribe-for-life-squad-page/blob/main/docs/INSTRUCTIONS.md) 
+* [Instructies](https://github.com/fdnd-task/your-tribe-for-life-profile-card/blob/main/docs/INSTRUCTIONS.md) 
 * [Sveltekit](https://kit.svelte.dev/)
 * [Prismic](https://prismic.io/)
 * [NodeJS](https://nodejs.org/en)
